@@ -13,6 +13,7 @@ export default function Login() {
   const handleLogin = (event) => {
     event.preventDefault();
     if (user === 'admin' && pass === 'admin') {
+        localStorage.setItem('cres-auth', 'true'); 
       navigate('/');
     } else {
       alert('Invalid credentials');
